@@ -54,8 +54,11 @@
   }
   .movie {
     position: relative;
-    margin-left: 4.5em;
   }
+
+main {
+  padding-left: 4.5em;
+}
 
 
   /* -------------------------------------------------- */
@@ -77,4 +80,105 @@
   background-color: black;
   padding: 1em;
   color: white;
+}
+
+}
+
+/* -------------------------------------------------- */
+/* MEDIA QUERIES!!!! */
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 992px) {
+
+  /* -------------------------------------------------- */
+  /* HEADER STYLES */
+  /* -------------------------------------------------- */
+
+
+
+  /* -------------------------------------------------- */
+  /* MAIN STYLES */
+  /* -------------------------------------------------- */
+
+/*show all posters*/
+.movie-poster {
+    display: block;
+  }
+
+/*hide first poster*/
+.movie:first-child .movie-image .movie-poster{
+  display:none;
+}
+
+/*hide all backdrops*/
+.movie-backdrop {
+  display: none;
+}
+
+/*show first backdrop*/
+.movie:first-child .movie-image .movie-backdrop{
+  display:block;
+}
+
+/*hide all overviews*/
+.movie-overview {
+    display:none;
+  }
+
+/*show first overview*/
+.movie:first-child .movie-details .movie-overview {
+    display:block;
+  }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+main article:first-child{
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+}
+
+
+  /* -------------------------------------------------- */
+  /* FOOTER STYLES */
+  /* -------------------------------------------------- */
+
+
+}
+
+/* -------------------------------------------------- */
+/* MEDIA QUERIES!!!! */
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 1300px) {
+
+  /* -------------------------------------------------- */
+  /* HEADER STYLES */
+  /* -------------------------------------------------- */
+
+
+
+  /* -------------------------------------------------- */
+  /* MAIN STYLES */
+  /* -------------------------------------------------- */
+
+
+.movie:first-child .movie-image .movie-backdrop {
+  width: 100%;
+  height: auto;
+}
+
+/*also works*/
+/* .movie:first-child .movie-image:first-child .movie-backdrop:nth-child(2){
+  display:block;
+} */
+
+
+
+  /* -------------------------------------------------- */
+  /* FOOTER STYLES */
+  /* -------------------------------------------------- */
+
 }
